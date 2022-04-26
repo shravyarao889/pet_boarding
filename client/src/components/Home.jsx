@@ -52,7 +52,7 @@ export const Home=()=>{
         <table style={{margin:"auto"}}>
             <thead>
                 <tr>
-                    <th>id</th>
+                  
                     <th>Name</th>
                     <th>City</th>
                     <th>Address</th>
@@ -66,7 +66,7 @@ export const Home=()=>{
                 {
                     data.map((elem)=>{
                        return  <tr key={elem._id} onClick={()=>{ navigate(`/listing/${elem._id}`)}}>
-                            <td>{elem._id}</td>
+                            
                             <td>{elem.name}</td>
                             <td>{elem.city}</td>
                             <td>{elem.address}</td>
