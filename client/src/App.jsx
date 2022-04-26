@@ -1,17 +1,19 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import { CreateEntity } from './components/CreateEntity'
-import Home from './components/Home'
-import Routers from './components/Routers'
-function App() {
-  
+import "./App.css";
+import { Routers } from "./Routers/Routers";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from 'react-redux'
+import {store} from "./Redux/store.js"
 
+function App() {
   return (
     <div className="App">
-    <Routers />
+       <Provider store={store}>
+      <BrowserRouter>
+        <Routers />
+      </BrowserRouter>
+    </Provider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
